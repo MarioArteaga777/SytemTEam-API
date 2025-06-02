@@ -1,0 +1,33 @@
+.add-button{
+    position: fixed;/*Encima del contenido*/
+    bottom: 30px;
+    right: 35px;
+    background-color: gold;
+    border: none;
+    border-radius: 50%;
+
+    /*Simetria en el boton*/
+    width: 70px;
+    height: 70px;
+    
+    /*Flexbox para centrar*/
+    display: flex;
+
+    /*Aliniar horizontal*/
+    justify-content: center;
+
+    /*Alinear vertical*/
+    align-items: center;
+
+    /*SOmbra del boton*/
+    box-shadow: 0 4px 10px 10px rgba(245, 225, 46, 0.5);
+
+    /*Para qe el boton qede siempe encima de todo*/
+    z-index: 1001;
+
+    transition: transform 0.3s;
+}
+
+.add-button:hover{
+    transform: scale(1.1);
+}
