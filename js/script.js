@@ -32,7 +32,7 @@ function CrearTabla(datos){//Datos representa al JSON que viene de la API
             <td>${persona.correo}</td>
             <td>
                     <button>Editar</button>
-                    <button>Eliminar</button>
+                    <button onClick="EliminarRegistro (${persona.id})">Eliminar</button>
                  </td>
          </tr>
         
@@ -99,3 +99,11 @@ document.getElementById("frmagregarintegrante").addEventListener("submit", async
     }
 
 });//Fin ¿En realidad es el fin o es un nuevo comienzo?
+
+//Eliminar registro
+async function EliminarRegistro(id) {
+    if(confirm("¿Estas seguro que deseas borrar el registro?")){
+        await fetch(`${API_URL}/${id}`, { method:'DELETE'});
+        ObtenerPersonas();
+    }  
+}
